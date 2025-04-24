@@ -7,6 +7,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -23,6 +24,9 @@ Users should be able to:
 
 ### Screenshot
 ![project-screenshot](social-link-sc.png)
+
+## Link
+[live site url](https://markorrente01.github.io/social-links/)
 
 ## My process
 
