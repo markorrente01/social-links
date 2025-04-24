@@ -1,0 +1,160 @@
+$Green: hsl(75, 94%, 57%);
+$White: hsl(0, 0%, 100%);
+$Grey-700: hsl(0, 0%, 20%);
+$Grey-800: hsl(0, 0%, 12%);
+$Grey-900: hsl(0, 0%, 8%);
+$flex: flex;
+$margin-b: 15px;
+$margin-b1: 10px;
+
+@mixin fonts($f-size: normal, $weight: normal){
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $f-size;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: $flex;
+    justify-content: center;
+    align-items: center;
+    background: $Grey-900;
+}
+
+main{
+    width: 22%;
+    text-align: center;
+    padding: 1.7rem 2rem;
+    background: $Grey-800;
+    border-radius: 10px;
+
+        img{
+            border-radius: 50%;
+            width: 30%;
+            margin-bottom: $margin-b;
+        }
+
+        h3{
+            @include fonts($weight: 700);
+            margin-bottom: $margin-b1;
+            color: $White;
+        }
+
+        h5{
+            @include fonts($weight: 600);
+            margin-bottom: 18px;
+            color: $Green;
+
+        }
+
+        p{
+            @include fonts($f-size: 13.5px);
+            margin-bottom: $margin-b;
+            color: $White;
+        }
+}
+
+ul{
+    list-style: none;
+
+        li{
+            margin-bottom: 12px;
+
+            a{
+                display: block;
+                padding: 0.7rem;
+                @include fonts($weight: 700, $f-size: 14px);
+                background: $Grey-700;
+                color: $White;
+                text-decoration: none;
+                border: none;
+                transition: all 0.2s linear, transform 0.2s;
+                border-radius: 8px;
+
+                &:hover{
+                    background: $Green;
+                    color: $Grey-900;
+                    transform: translateY(-2px);
+                }
+    
+                &:active{
+                    transform: translateY(2px);
+                }
+            }
+
+            
+        }
+}
+
+@media (max-width: 1360px){
+    main{
+        width: 25%;
+    }
+}
+
+    
+@media (max-width: 1200px){
+    main{
+        width: 30%;
+        padding: 1.7rem;
+
+            img{
+                width: 31.5%;
+            }
+
+            p{
+                @include fonts($f-size: 13px);
+            }
+
+    }
+}
+
+@media (max-width: 990px){
+    main{
+        width: 40%;
+        padding: 1.7rem 1.8rem;
+    }
+}
+
+@media (max-width: 755px){
+    main{
+        width: 58%;
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px){
+    main{
+        width: 70%;
+
+        p{
+            @include fonts($f-size: 12px);
+        }
+    }
+
+    ul{
+        list-style: none;
+    
+            li{
+                a{
+                    padding: 0.7rem;
+                    @include fonts($weight: 700, $f-size: 13px);
+                    border-radius: 7px;
+                }
+            }
+    }
+}
+
+@media (max-width: 376px){
+    main{
+        width: 85%;
+    }
+}
